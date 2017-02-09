@@ -6,7 +6,7 @@ describe('webdriver.io page', function() {
 		// (Site was entered interactively when the script was called.)
 		var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/wp-admin/';
 		browser.url(theURL);
-
+browser.pause(1000);
 		// Log in. (Credentials were entered when the script was called.)
 		browser.waitForExist('#user_login');
 		browser.setValue('#user_login', process.env.TESTUSER);
@@ -17,10 +17,11 @@ describe('webdriver.io page', function() {
 		// Go to the page that lists the site's pages:
                 var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/wp-admin/edit.php?post_type=page';
                 browser.url(theURL);
+browser.pause(1000);
 		// Click the title of the first page on the list.
 		browser.waitForExist("[data-colname='Title'] a:first-child", 3500);
 		browser.click("[data-colname='Title'] a:first-child");  
-
+browser.pause(1000);
 		// Wait for the edit page form to load. Click the Preview Changes button.
 		browser.waitForExist('#post-preview');
 		browser.click('#post-preview');
@@ -28,7 +29,7 @@ describe('webdriver.io page', function() {
 		// In some browsers this opens a new tab.
 		var my_tabs_array = browser.getTabIds();
 		browser.switchTab(my_tabs_array[1]);
-
+browser.pause(2000);
                 // Is the page title 'WordPress › Error' ?
                 var title = browser.getTitle();
                 assert.notEqual(title, 'WordPress › Error', 'We are seeing the preview page error message.');

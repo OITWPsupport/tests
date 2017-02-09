@@ -61,14 +61,14 @@ driver.findElements({className: 'child_toggle'}).then(function(elements) {
         }
 });
 
-// Test that an ADMISSION TO ART item appears in the left nav.
-driver.findElements({id: 'menu-item-10051'}).then(function(elements) {
+// Test that a CONTACT US item appears in the left nav.
+driver.findElements({id: 'menu-item-15701'}).then(function(elements) {
         var isPresent = elements.length;
         if (isPresent){
-                console.log('Page element \'menu-item-10051\' (\'ADMISSION TO ART left-nav link\') is here');
+                console.log('Page element \'menu-item-15701\' (\'CONTACT US left-nav link\') is here');
                 elements[0].getText().then(function (text) { console.log('\ttext = ' + text); });
         } else {
-                console.log('ERROR: Page element \'menu-item-10051\' (\'ADMISSION TO ART left-nav link\') is NOT FOUND');
+                console.log('ERROR: Page element \'menu-item-15701\' (\'CONTACT US left-nav link\') is NOT FOUND');
         }
 });
 
