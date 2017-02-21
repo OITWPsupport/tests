@@ -134,12 +134,12 @@ driver.findElements({id: 'topnav'}).then(function(elements) {
         }
 });
 
-# As of 20170221 this redirect URL appears to forward to a new one, so this test is failing.
-# It's likely not a problem, but when this test executes its URL doesn't match what's 
-# specified here. That's out of our hands, doesn't result in an error for the user, 
-# so we'll discontinue this part of the test for now:
+// As of 20170221 this redirect URL appears to forward to a new one, so this test is failing.
+// It's likely not a problem, but when this test executes its URL doesn't match what's 
+// specified here. That's out of our hands, doesn't result in an error for the user, 
+// so we'll discontinue this part of the test for now:
 var URL = 'https://earth.boisestate.edu/pal';
 var redirect = 'https://www.physics.auckland.ac.nz/research/pal/';
-#require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
+// require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
 driver.quit();
