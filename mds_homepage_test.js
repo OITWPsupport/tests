@@ -18,16 +18,6 @@ const until = webdriver.until;
 require('./includes/header.js').testHeader(webdriver, driver);
 require('./includes/search.js').testSearch(webdriver, driver);
 
-// Test that the left nav has an ONLINE PROGRAM link, and that it has the proper id
-driver.findElements({id: 'menu-item-15032'}).then(function(elements) {
-        var isPresent = elements.length;
-        if (isPresent){
-                console.log('Page element of ID \'menu-item-15032\' (the ONLINE PROGRAM link) is here');
-        } else {
-                console.log('ERROR: Page element of class \'menu-item-15032\' (the ONLINE PROGRAM link) is NOT FOUND');
-        }
-});
-
 // INCLUDING SHARED CODE for testing "Mega Menu" elements:
 require('./includes/megamenu.js').testMegamenu(webdriver, driver);
 
