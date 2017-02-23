@@ -3,8 +3,10 @@ var expect = require('chai').expect;
 
 describe('webdriver.io page', function() {
         it('Should have a post-footer element with the right text', function () {
-                browser.url('https://aae.boisestate.edu');
-
+                // browser.url('https://aae.boisestate.edu');
+		var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/';
+                browser.url(theURL);
+console.log(theURL);
                 var post_footer = browser.isExisting('.post-footer');
                 assert(post_footer, 'There is no post-footer element on this page.');
 

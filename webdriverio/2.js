@@ -1,10 +1,16 @@
 var assert = require('assert');
 describe('webdriver.io page', function() {
 	it.only('Should have the right title.', function () {
-		console.log(process.env.TESTUSER);
+		var dt1 = new Date();
+		var startTimestamp = dt1.getTime();
+		// console.log(process.env.TESTUSER);
 		browser.url('https://aae.boisestate.edu');
 		var title = browser.getTitle();
 		assert.equal(title, 'Advising and Academic Enhancement - Advising and Academic Enhancement');
+		var dt2 = new Date();
+		var endTimestamp = dt2.getTime();
+		var elapsed = (endTimestamp-startTimestamp);
+		console.log('Took ' + elapsed + ' ms to load the page.');
 	});
 
 	it('should have an icon link of class=nav_home', function() {

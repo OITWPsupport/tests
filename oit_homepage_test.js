@@ -52,6 +52,10 @@ driver.findElements({className: 'localnav'}).then(function(elements) {
 	require('./includes/social.js').testBsocial(webdriver, driver);
 });
 
+// INCLUDING SHARED CODE for testing header and search elements:
+require('./includes/toggle.js').testToggle(webdriver, driver);
+
+/*
 // Test that a toggle item appears in the left nav.
 // (Find and click a plus sign in the left nav to expand sub nav items.)
 driver.findElements({className: 'child_toggle'}).then(function(elements) {
@@ -64,7 +68,7 @@ driver.findElements({className: 'child_toggle'}).then(function(elements) {
                 console.log('ERROR: Page element \'child_toggle\' is NOT FOUND');
         }
 });
-
+*/
 // Test that a 'NEWS @ OIT' item appears in the left nav.
 driver.findElements({id: 'menu-item-30941'}).then(function(elements) {
         var isPresent = elements.length;
