@@ -11,6 +11,6 @@ describe('webdriver.io page', function() {
 		var pageLoadTime = (endTimestamp-startTimestamp)
                 console.log('Took ' + pageLoadTime + ' ms to load the page.');
 
-                expect(pageLoadTime).to.be.below(20000);
+                expect(pageLoadTime).to.be.below(5000, 'ERROR: page load time higher than expected');
         });
 });
