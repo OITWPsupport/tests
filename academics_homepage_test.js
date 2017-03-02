@@ -65,7 +65,7 @@ driver.findElements({className: 'post-footer'}).then(function(elements) {
                 require('./includes/footer.js').testFooter(webdriver, driver);
                 require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-1000');
                 require('./includes/footer.js').testDeptName(webdriver, driver, 'BOISE STATE UNIVERSITY');
-                require('./includes/footer.js').testEmail(webdriver, driver, 'PROVOST@BOISESTATE.EDU');
+                require('./includes/footer.js').testEmail(webdriver, driver, 'PROVOST@BOISESTATE.EDUzzz');
                 require('./includes/footer.js').testMailingAddress(webdriver, driver, '1910 UNIVERSITY DRIVE');
         } else {
                 console.log('ERROR: Page element of class \'post-footer\' is NOT FOUND');

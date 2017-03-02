@@ -55,14 +55,14 @@ driver.findElements({className: 'child_toggle'}).then(function(elements) {
         }
 });
 
-// Test that a 'RESEARCH COMPUTING' item appears in the left nav.
+// Test that a 'RESEARCH COMPUTING SUPPORT' item appears in the left nav.
 driver.findElements({id: 'menu-item-1072'}).then(function(elements) {
         var isPresent = elements.length;
         if (isPresent){
-                console.log('Page element \'menu-item-1072\' (\'RESEARCH COMPUTING left-nav link\')) is here');
+                console.log('Page element \'menu-item-1072\' (\'RESEARCH COMPUTING SUPPORT left-nav link\')) is here');
                 elements[0].getText().then(function (text) { console.log('\ttext = ' + text); });
         } else {
-                console.log('ERROR: Page element \'menu-item-1072\' (\'RESEARCH COMPUTING left-nav link\')) is NOT FOUND');
+                console.log('ERROR: Page element \'menu-item-1072\' (\'RESEARCH COMPUTING SUPPORT left-nav link\')) is NOT FOUND');
         }
 });
 
@@ -109,11 +109,11 @@ driver.findElements({className: 'entry-title'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element \'entry-title\' is here');
 		elements[0].getText().then(function (text) {
-	                if (text == 'RESEARCH COMPUTING') {
+	                if (text == 'RESEARCH COMPUTING SUPPORT') {
        	                	 console.log('\tText is correct: ' + text);
                 	} else {
                         	console.log('\tERROR: Text is INCORRECT: ' + text);
-				console.log('\t(Should read \'RESEARCH COMPUTING\'');
+				console.log('\t(Should read \'RESEARCH COMPUTING SUPPORT\'');
                 	}
 		});
         } else {
