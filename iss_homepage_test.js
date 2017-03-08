@@ -1,35 +1,30 @@
-//
+// 
 // TEST CONFIGURATION
-//
+// 
 
 // Set the URL of the page to test:
-var URL = 'https://emeritiguild.boisestate.edu';
+var URL = 'https://iss.boisestate.edu';
 
 var webdriver = require('selenium-webdriver');
 var driver = new webdriver.Builder().forBrowser('firefox').build();
+// var driver = new webdriver.Builder().forBrowser('chrome').build();
 require('./includes/driver.js').setURL(webdriver, driver, URL);
 const until = webdriver.until;
 
 //
-// HEADER STUFF
+// HEADER STUFF 
 //
 
 // INCLUDING SHARED CODE for testing header and search elements:
 require('./includes/header.js').testHeader(webdriver, driver);
 require('./includes/search.js').testSearch(webdriver, driver);
 
-// Test that the left nav has a CONTACT US link, and that it has the proper id
-driver.findElements({id: 'menu-item-1041'}).then(function(elements) {
-        var isPresent = elements.length;
-        if (isPresent){
-                console.log('Page element of ID \'menu-item-1041\' (the CONTACT US link) is here');
-        } else {
-                console.log('ERROR: Page element of class \'menu-item-1041\' (the CONTACT US link) is NOT FOUND');
-        }
-});
-
 // INCLUDING SHARED CODE for testing "Mega Menu" elements:
 require('./includes/megamenu.js').testMegamenu(webdriver, driver);
+
+//
+// END HEADER STUFF
+//
 
 // 
 // LEFT NAV STUFF
@@ -37,14 +32,38 @@ require('./includes/megamenu.js').testMegamenu(webdriver, driver);
 
 // INCLUDING SHARED CODE for testing that social icons/links appear in the left nav:
 driver.findElements({className: 'localnav'}).then(function(elements) {
-        // console.log('Checking the left nav for social icons / links...');
-        // require('./includes/social.js').testTwitter(webdriver, driver);
-        // require('./includes/social.js').testFacebook(webdriver, driver);
-        // require('./includes/social.js').testYoutube(webdriver, driver);
-        // require('./includes/social.js').testPinterest(webdriver, driver);
-        // require('./includes/social.js').testInstagram(webdriver, driver);
-        // require('./includes/social.js').testRSS(webdriver, driver);
-        // require('./includes/social.js').testBsocial(webdriver, driver);
+	console.log('Checking the left nav for social icons / links...');
+	require('./includes/social.js').testTwitter(webdriver, driver);
+	require('./includes/social.js').testFacebook(webdriver, driver);
+	require('./includes/social.js').testYoutube(webdriver, driver);
+	// require('./includes/social.js').testPinterest(webdriver, driver);
+	require('./includes/social.js').testInstagram(webdriver, driver);
+	// require('./includes/social.js').testRSS(webdriver, driver);
+	require('./includes/social.js').testBsocial(webdriver, driver);
+});
+
+// Test that a toggle item appears in the left nav.
+// (Find and click a plus sign in the left nav to expand sub nav items.)
+driver.findElements({className: 'child_toggle'}).then(function(elements) {
+        var isPresent = elements.length;
+        if (isPresent){
+                console.log('Page element \'child_toggle\' is here');
+		// TODO: Can we check that this click worked?
+                driver.findElement({className: 'child_toggle'}).click();
+        } else {
+                console.log('ERROR: Page element \'child_toggle\' is NOT FOUND');
+        }
+});
+
+// Test that an 'INTERNATIONAL STUDENT SERVICES' item appears in the left nav.
+driver.findElements({id: 'menu-item-71'}).then(function(elements) {
+        var isPresent = elements.length;
+        if (isPresent){
+                console.log('Page element \'menu-item-71\' (\'INTERNATIONAL STUDENT SERVICES left-nav link\')) is here');
+                elements[0].getText().then(function (text) { console.log('\ttext = ' + text); });
+        } else {
+                console.log('ERROR: Page element \'menu-item-71\' (\'INTERNATIONAL STUDENT SERVICES left-nav link\')) is NOT FOUND');
+        }
 });
 
 // 
@@ -58,16 +77,15 @@ driver.findElements({className: 'localnav'}).then(function(elements) {
 // INCLUDE REUSABLE CODE for testing that footer elements are present and correct.
 // Note the strings we're passing here; they'll change for each site.
 driver.findElements({className: 'post-footer'}).then(function(elements) {
-        console.log('Checking that the post-footer is present and accurate...');
+	console.log('Checking that the post-footer is present and accurate...');
         var isPresent = elements.length;
         if (isPresent){
                 console.log('Page element of class \'post-footer\' is here');
-                require('./includes/footer.js').testFooter(webdriver, driver);
-                require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-4836');
-                require('./includes/footer.js').testDeptName(webdriver, driver, 'EMERITI GUILD');
-                require('./includes/footer.js').testEmail(webdriver, driver, 'EMERITIGUILD@BOISESTATE.EDU');
-                require('./includes/footer.js').testMailingAddress(webdriver, driver, 'CAPITAL VILLAGE ACROSS FROM CAMPUS SECURITY');
-        } else {
+                require('./includes/footer.js').testPhoneNumber(webdriver, driver, '208-426-3652');
+                require('./includes/footer.js').testDeptName(webdriver, driver, 'INTERNATIONAL STUDENT SERVICES');
+                require('./includes/footer.js').testEmail(webdriver, driver, 'INTERNATIONALINFO@BOISESTATE.EDU');
+		require('./includes/footer.js').testMailingAddress(webdriver, driver, 'SIMPLOT/MICRON BUILDING, ROOM 227');
+        } else { 
                 console.log('ERROR: Page element of class \'post-footer\' is NOT FOUND');
         }
 });
@@ -89,18 +107,19 @@ driver.findElements({className: 'entry-title'}).then(function(elements) {
         var isPresent = elements.length;
         if (isPresent){
                 console.log('Page element \'entry-title\' is here');
-                elements[0].getText().then(function (text) {
-                        if (text == 'BOISE STATE UNIVERSITY EMERITI GUILD') {
-                                 console.log('\tText is correct: ' + text);
-                        } else {
-                                console.log('\tERROR: Text is INCORRECT ' + text);
-                                console.log('\t(Should read \'BOISE STATE UNIVERSITY EMERITI GUILD\'');
-                        }
-                });
+		elements[0].getText().then(function (text) {
+	                if (text == 'INTERNATIONAL STUDENT SERVICES') {
+       	                	 console.log('\tText is correct: ' + text);
+                	} else {
+                        	console.log('\tERROR: Text is INCORRECT: ' + text);
+				console.log('\t(Should read \'INTERNATIONAL STUDENT SERVICES\'');
+                	}
+		});
         } else {
                 console.log('ERROR: Page element \'entry-title\' is NOT FOUND');
         }
 });
+
 
 // INCLUDING REUSABLE CODE for testing that menu elements are present and correct.
 driver.findElements({id: 'topnav'}).then(function(elements) {
