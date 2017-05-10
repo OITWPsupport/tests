@@ -82,7 +82,7 @@ driver.findElements({className: 'post-footer'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element of class \'post-footer\' is here');
 		require('./includes/footer.js').testFooter(webdriver, driver);
-		require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426.3956');
+		require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-3956');
 		require('./includes/footer.js').testDeptName(webdriver, driver, 'WORLD LANGUAGES');
 		require('./includes/footer.js').testEmail(webdriver, driver, 'PLEASE EMAIL BOTH: LDAWKINS@BOISESTATE.EDU AND DIANACARRILLO@BOISESTATE.EDU');
 		require('./includes/footer.js').testMailingAddress(webdriver, driver, 'ALBERTSONS LIBRARY L-140B');
