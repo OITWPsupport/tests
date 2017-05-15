@@ -155,11 +155,6 @@ driver.findElements({id: 'topnav'}).then(function(elements) {
 // 
 
 // driver.sleep(1500);
-var URL = 'https://veterans.boisestate.edu/blog/2011/11/10/bsu-named-military-friendly-school-2012/';
-var redirect = 'http://www.militaryfriendlyschools.com/search/profile.aspx?id=142115&year=2012';
-require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
-
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2011/11/11/military-members-vets-focus-of-activities-on-bsu-campus/';
 var redirect = 'http://news.boisestate.edu/update/2011/11/10/military-members-vets-focus-of-activities-on-boise-state-campus/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
