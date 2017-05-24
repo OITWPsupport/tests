@@ -84,7 +84,7 @@ driver.findElements({className: 'post-footer'}).then(function(elements) {
 		require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-1568');
 		require('./includes/footer.js').testDeptName(webdriver, driver, 'SCHOOL OF SOCIAL WORK');
 		require('./includes/footer.js').testEmail(webdriver, driver, 'SOCIALWORK@BOISESTATE.EDU');
-		require('./includes/footer.js').testMailingAddress(webdriver, driver, 'EDUCATION BUILDING, 7TH FLOOR');
+		require('./includes/footer.js').testMailingAddress(webdriver, driver, '1910 UNIVERSITY DRIVE, EDUCATION SUITE 717, BOISE, IDAHO 83725-1940');
         } else {
                 console.log('ERROR: Page element of class \'post-footer\' is NOT FOUND');
         }
@@ -108,11 +108,11 @@ driver.findElements({className: 'entry-title'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element \'entry-title\' is here');
 		elements[0].getText().then(function (text) {
-	                if (text == 'SCHOOL OF SOCIAL WORK') {
+	                if (text == 'ABOUT THE SCHOOL OF SOCIAL WORK') {
        	                	 console.log('\tText is correct: ' + text);
                 	} else {
                         	console.log('\tERROR: Text is INCORRECT: ' + text);
-				console.log('\t(Should read \'SCHOOL OF SOCIAL WORK\'');
+				console.log('\t(Should read \'ABOUT THE SCHOOL OF SOCIAL WORK\'');
                 	}
 		});
         } else {
