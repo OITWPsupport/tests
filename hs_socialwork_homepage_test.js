@@ -108,11 +108,11 @@ driver.findElements({className: 'entry-title'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element \'entry-title\' is here');
 		elements[0].getText().then(function (text) {
-	                if (text == 'ABOUT THE SCHOOL OF SOCIAL WORK') {
+	                if (text == 'ABOUT THE BOISE STATE SCHOOL OF SOCIAL WORK') {
        	                	 console.log('\tText is correct: ' + text);
                 	} else {
                         	console.log('\tERROR: Text is INCORRECT: ' + text);
-				console.log('\t(Should read \'ABOUT THE SCHOOL OF SOCIAL WORK\'');
+				console.log('\t(Should read \'ABOUT THE BOISE STATE SCHOOL OF SOCIAL WORK\'');
                 	}
 		});
         } else {
