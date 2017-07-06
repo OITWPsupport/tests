@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 
 describe('webdriver.io page', function() {
         it('Should have a mega menu with all the right text', function () {
-		var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/';
+		var theURL = 'https://english.boisestate.edu/';
 		browser.url(theURL);
 
                 var post_footer = browser.isExisting('#fw-mega-menu');

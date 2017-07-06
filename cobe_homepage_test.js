@@ -78,7 +78,7 @@ driver.findElements({className: 'post-footer'}).then(function(elements) {
                 console.log('Page element of class \'post-footer\' is here');
                 require('./includes/footer.js').testFooter(webdriver, driver);
                 require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-1125');
-                require('./includes/footer.js').testDeptName(webdriver, driver, 'COLLEGE OF BUSINESS AND ECONOMICS ADMINISTRATION');
+                require('./includes/footer.js').testDeptName(webdriver, driver, 'COLLEGE OF BUSINESS AND ECONOMICS');
                 require('./includes/footer.js').testEmail(webdriver, driver, 'COBE-INFO@BOISESTATE.EDU');
                 require('./includes/footer.js').testMailingAddress(webdriver, driver, 'MICRON BUSINESS AND ECONOMICS BUILDING ROOM 3131');
         } else {

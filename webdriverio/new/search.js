@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 
 describe('webdriver.io page', function() {
         it('Should hav a search field', function () {
-                var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/';
+                var theURL = 'https://english.boisestate.edu/';
                 browser.url(theURL);
 
                 var search_field = browser.isExisting('#q');

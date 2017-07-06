@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 
 describe('webdriver.io page', function() {
         it('Should have one link class=nav_home (an icon in the breadcrumb nav)', function () {
-                var theURL = 'https://' + process.env.TESTSITE + '.boisestate.edu/';
+                var theURL = 'https://english.boisestate.edu/';
                 browser.url(theURL);
 
                 var nav_home = browser.isExisting('#breadcrumb_wrap .nav_home');
