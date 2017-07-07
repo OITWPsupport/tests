@@ -1,9 +1,10 @@
 var assert = require('chai').assert;
 var expect = require('chai').expect;
+var paramslocal = require('./paramslocal.js');
 
 describe('webdriver.io page', function() {
         it('Should have one link class=nav_home (an icon in the breadcrumb nav)', function () {
-                var theURL = 'https://aasc.boisestate.edu/';
+                var theURL = paramslocal.theURL;
                 browser.url(theURL);
 
                 var nav_home = browser.isExisting('#breadcrumb_wrap .nav_home');
