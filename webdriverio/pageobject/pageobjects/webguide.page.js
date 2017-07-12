@@ -2,8 +2,6 @@ var page = require('./page');
 
 var webguidePage = Object.create(page, {
 
-
-
     /**
      * define elements
      */
