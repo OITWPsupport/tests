@@ -11,8 +11,15 @@ exports.config = {
     //
     specs: [
         // __dirname + '/specs/*.spec.js'
-	__dirname + '/specs/**/*.spec.js'
+	'./specs/webguide/**/*.spec.js'
     ],
+
+	suites: {
+		webguide: [
+			'./specs/webguide/**/*.spec.js'
+		],
+	},
+
     //
     // ============
     // Capabilities
@@ -26,6 +33,9 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
+
+maxInstances: 5,
+
     capabilities: [{
         // browserName: 'phantomjs'
 	browserName: 'firefox'

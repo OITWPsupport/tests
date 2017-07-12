@@ -4,8 +4,8 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://webguide.boisestate.edu/about-siteimprove/';
-var title = 'About Siteimprove - Boise State Webguide';
+var testURL = 'https://www.boisestate.edu/webguide/blog/2016/04/29/use-headings-blog-posts/';
+var title = 'Use Headings in Blog Posts - Boise State Webguide';
 var header = '';
 
 describe('test suite for ' + testURL, function () {

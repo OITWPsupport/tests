@@ -4,13 +4,14 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://webguide.boisestate.edu/about-siteimprove/';
-var title = 'About Siteimprove - Boise State Webguide';
+var testURL = 'https://www.boisestate.edu/webguide/widgets/';
+var title = 'Widgets';
 var header = '';
 
 describe('test suite for ' + testURL, function () {
     it('should load the page in under 7 seconds', function () {
         var path = testURL.substring(testURL.indexOf('.edu/')+4);
+console.log('path = ' + path);
         var startTimestamp = new Date().getTime();
         ThisPage.open(path);
         ThisPage.footerDiv.waitForVisible();

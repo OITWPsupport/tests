@@ -4,8 +4,8 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://webguide.boisestate.edu/about-siteimprove/';
-var title = 'About Siteimprove - Boise State Webguide';
+var testURL = 'https://www.boisestate.edu/webguide/available-plugins/scan-new-content/';
+var title = 'Boise State Scan New Content Plugin - Boise State Webguide';
 var header = '';
 
 describe('test suite for ' + testURL, function () {
