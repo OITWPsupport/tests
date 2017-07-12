@@ -2,7 +2,7 @@
 #
 # This script creates the webguide test files that test the pages of the site after
 # the accessibility subsite is exported and brought into the root site.
-# It reads data from ~/Desktop/temp.csv, which is data formatted specifically for these 
+# It reads data from data/temp.csv, which is data formatted specifically for these 
 # scripts. (See also before.sh.) The source for temp.csv is an export file from the
 # Export All URLs plugin on the webguide/accessibility subsite. That file is in the format 
 #
