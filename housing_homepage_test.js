@@ -140,7 +140,8 @@ var redirect = 'https://housing.boisestate.edu/apply-for-apartments/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
 var URL = 'https://housing.boisestate.edu/topics/bottom-line-estimator/';
-var redirect = 'https://financialaid.boisestate.edu/bottom-line-estimator/';
+// var redirect = 'https://financialaid.boisestate.edu/bottom-line-estimator/';
+var redirect = 'https://financialaid.boisestate.edu/handbook/borrowing-and-budgeting/bottom-line-estimator/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
 var URL = 'https://housing.boisestate.edu/applications/';
