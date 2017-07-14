@@ -4,12 +4,12 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://webguide.boisestate.edu/accessibility/youtube-accessibility/';
-var title = '""YouTube Accessibility" - Boise State Webguide"';
+var testURL = 'https://webguide.boisestate.edu/accessibility/';
+var title = '"Web Accessibility at Boise State University - Web Accessibility"';
 var header = '';
 
 describe('test suite for ' + testURL, function () {
-    it('should load the page in under 7 seconds', function () {
+    it('should load the page in under ' + ThisPage.pageLoadTime + ' ms', function () {
         var path = testURL.substring(testURL.indexOf('.edu/')+4);
         var startTimestamp = new Date().getTime();
         ThisPage.open(path);
@@ -17,7 +17,7 @@ describe('test suite for ' + testURL, function () {
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
         console.log('It took ' + pageLoadTime + ' ms to load the page.');
-        expect(pageLoadTime).to.be.below(7000);
+        expect(pageLoadTime).to.be.below(ThisPage.pageLoadTime);
     });
 
     it('should verify the URL', function () {
@@ -42,7 +42,6 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.phoneNumberString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.emailAddressString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
-	// expect(ThisPage.header.getText()).to.equal(header);
 	expect(ThisPage.post_footer).to.exist;
     });
 
@@ -51,8 +50,13 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.nav_home_link).to.equal('http://www.boisestate.edu/');
     });
 
-    it.skip('should check the title', function () {
-        expect(ThisPage.title).to.equal(title);
+    it('should check the H1 text', function () {
+        // expect(ThisPage.headerGeneric.getText()).to.equal(header);
+        expect(ThisPage.headerGeneric.getText()).to.not.equal('PAGE NOT FOUND');
+    });
+
+    it('should check the title', function () {
+        expect(title).to.include(ThisPage.title);
     });
 
     it('should check the mega menu', function () {

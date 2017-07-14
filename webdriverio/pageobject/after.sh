@@ -11,7 +11,7 @@
 #
 # It was processed with the following command to fix titles, create filenames, and
 # determine the "before" and "after" URLs:
-sed -E 's/^(.*),https:\/\/(.*).boisestate.edu(.*)/"\1 - Web Accessibility",https:\/\/\2.boisestate.edu\3https:\/\/\2.boisestate.edu\3/' data/Exported_Data.CSV | sed -E 's/boisestate.edu\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)\/(([a-zA-Z0-9-]+)\/,)*$/boisestate.edu\/\1-\2\/\3/' | sed -E 's/^(.*)\/([A-Z0-9a-z-]*)\/,$/\1\/\2\/,\2/'
+# sed -E 's/^(.*),https:\/\/(.*).boisestate.edu\/([a-zA-Z0-9-]*)\/(.*),$/"\1 - Web Accessibility",https:\/\/\2.boisestate.edu\/\3\/\4,https:\/\/\2.boisestate.edu\/\4/' data/Exported_Data.CSV | sed -E 's/boisestate.edu\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)\/(([a-zA-Z0-9-]+)\/,)*$/boisestate.edu\/\1-\2\/\3/' | sed -E 's/^(.*)\/([A-Z0-9a-z-]*)\/,$/\1\/\2\/,\2/' | sed -E 's/^(.*)\/([A-Z0-9a-z-]*)\/$/\1\/\2\/,\2/'
 
 while IFS=, read title beforeurl afterurl filename
 do

@@ -18,6 +18,12 @@ exports.config = {
 		webguide: [
 			'./specs/webguide/**/*.spec.js'
 		],
+		webguide_before: [
+			'./specs/webguide/before/*.spec.js'
+		],
+                webguide_after: [
+                        './specs/webguide/after/*.spec.js'
+                ],
 	},
 
     //

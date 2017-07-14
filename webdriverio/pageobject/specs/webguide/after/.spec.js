@@ -4,8 +4,8 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://www.boisestate.edu/webguide/37222-2/';
-var title = 'Table 3 - Boise State Webguide';
+var testURL = 'https://webguide.boisestate.edu/';
+var title = '"Web Accessibility at Boise State University - Web Accessibility"';
 var header = '';
 
 describe('test suite for ' + testURL, function () {
@@ -42,7 +42,6 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.phoneNumberString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.emailAddressString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
-	// expect(ThisPage.header.getText()).to.equal(header);
 	expect(ThisPage.post_footer).to.exist;
     });
 
@@ -51,8 +50,13 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.nav_home_link).to.equal('http://www.boisestate.edu/');
     });
 
-    it.skip('should check the title', function () {
-        expect(ThisPage.title).to.equal(title);
+    it('should check the H1 text', function () {
+        expect(ThisPage.headerGeneric.getText()).to.equal(header);
+        expect(ThisPage.headerGeneric.getText()).to.not.equal('PAGE NOT FOUND');
+    });
+
+    it('should check the title', function () {
+        expect(title).to.include(ThisPage.title);
     });
 
     it('should check the mega menu', function () {
