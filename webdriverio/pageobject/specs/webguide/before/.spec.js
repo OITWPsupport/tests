@@ -4,8 +4,8 @@ var ThisPage = require('../../../pageobjects/webguide.page');
 //
 // These are the page-specific values to change for each new test
 //
-var testURL = 'https://webguide.boisestate.edu/37222-2/';
-var title = 'Table 3 - Boise State Webguide';
+var testURL = 'https://webguide.boisestate.edu/accessibility/youtube-accessibility/';
+var title = '""YouTube Accessibility" - Boise State Webguide"';
 var header = '';
 
 describe('test suite for ' + testURL, function () {

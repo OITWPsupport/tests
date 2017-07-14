@@ -1,6 +1,15 @@
+var expect = require('chai').expect;
+var ThisPage = require('../../../pageobjects/webguide.page');
+
+//
+// These are the page-specific values to change for each new test
+//
+var testURL = 'https://webguide.boisestate.edu/accessibility/using-siteimprove-web-accessibility/';
+var title = '"Using Siteimprove for Web Accessibility - Web Accessibility"';
+var header = '';
 
 describe('test suite for ' + testURL, function () {
-    it('should load the page in under 7 seconds', function () {
+    it('should load the page in under ' + ThisPage.pageLoadTime + ' ms', function () {
         var path = testURL.substring(testURL.indexOf('.edu/')+4);
         var startTimestamp = new Date().getTime();
         ThisPage.open(path);
@@ -8,7 +17,7 @@ describe('test suite for ' + testURL, function () {
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
         console.log('It took ' + pageLoadTime + ' ms to load the page.');
-        expect(pageLoadTime).to.be.below(7000);
+        expect(pageLoadTime).to.be.below(ThisPage.pageLoadTime);
     });
 
     it('should verify the URL', function () {
@@ -42,7 +51,7 @@ describe('test suite for ' + testURL, function () {
     });
 
     it('should check the H1 text', function () {
-        expect(ThisPage.headerGeneric.getText()).to.equal(header);
+        // expect(ThisPage.headerGeneric.getText()).to.equal(header);
         expect(ThisPage.headerGeneric.getText()).to.not.equal('PAGE NOT FOUND');
     });
 
