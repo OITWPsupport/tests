@@ -148,9 +148,9 @@ var URL = 'https://admissions.boisestate.edu/major-finder/';
 var redirect = 'https://majors.boisestate.edu/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-var URL = 'https://admissions.boisestate.edu/vip';
-var redirect = 'https://boisestate.askadmissions.net/vip/';
-require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
+// var URL = 'https://admissions.boisestate.edu/vip';
+// var redirect = 'https://boisestate.askadmissions.net/vip/';
+// require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
 // This tests the functionality to forward requests for an attachment page
 // and instead serve up its parent page. Was the result of Attachment Pages
