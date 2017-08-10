@@ -158,10 +158,6 @@ var URL = 'https://oit.boisestate.edu/aar/';
 var redirect = 'https://oit.boisestate.edu/myboisestate/files/2013/07/Advisor-AAR-Access.pdf';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-var URL = 'https://oit.boisestate.edu/accessibility/';
-var redirect = 'https://webguide.boisestate.edu/accessibility/';
-require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
-
 var URL = 'https://oit.boisestate.edu/broncobytes/';
 var redirect = 'https://oit.boisestate.edu/news/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
