@@ -93,7 +93,7 @@ driver.findElements({className: 'post-footer'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element of class \'post-footer\' is here');
 		require('./includes/footer.js').testFooter(webdriver, driver);
-		require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426.3744');
+		require('./includes/footer.js').testPhoneNumber(webdriver, driver, '(208) 426-3744');
 		require('./includes/footer.js').testDeptName(webdriver, driver, 'VETERAN SERVICES CENTER');
 		require('./includes/footer.js').testEmail(webdriver, driver, ' VETERANSERVICES@BOISESTATE.EDU');
 		require('./includes/footer.js').testMailingAddress(webdriver, driver, '1910 UNIVERSITY DRIVE BOISE ID 83725-1390');
