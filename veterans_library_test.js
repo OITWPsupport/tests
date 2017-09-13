@@ -30,7 +30,7 @@ driver.findElements({className: 'site-footer'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element of class \'site-footer\' is here');
 		require('./includes/woocommerce_footer.js').testFooter(webdriver, driver);
-		require('./includes/woocommerce_footer.js').testCopyright(webdriver, driver, '2017zzz');
+		require('./includes/woocommerce_footer.js').testCopyright(webdriver, driver, '2017');
 		require('./includes/woocommerce_footer.js').testStorefrontCredit(webdriver, driver, 'Storefront designed by');
         } else {
                 console.log('ERROR: Page element of class \'site-footer\' is NOT FOUND');
