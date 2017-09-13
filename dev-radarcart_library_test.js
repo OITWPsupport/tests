@@ -72,7 +72,7 @@ driver.findElements({id: 'woocommerce_product_categories-2'}).then(function(elem
 				"Drug Education", 
 				"Marijuana",
 				"Tobacco", 
-				"Parenting", 
+				"Parentingzzz", 
 				"Suicide", 
 				"Depression" 
 ];
