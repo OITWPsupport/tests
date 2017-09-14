@@ -171,11 +171,11 @@ var URL = 'https://music.boisestate.edu/boise-jazz-society-2/';
 var redirect = 'http://www.boisestate.edu/music/BJS/index.html';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-# This redirect fails because geneharris.org no longer exits.
-# We'll update Redirection to point instead to https://geneharris.boisestate.edu/
-#var URL = 'https://music.boisestate.edu/gene-harris-jazz-festival/';
-#var redirect = 'http://www.geneharris.org/';
-#require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
+// This redirect fails because geneharris.org no longer exits.
+// We'll update Redirection to point instead to https://geneharris.boisestate.edu/
+// var URL = 'https://music.boisestate.edu/gene-harris-jazz-festival/';
+// var redirect = 'http://www.geneharris.org/';
+// require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 var URL = 'https://music.boisestate.edu/gene-harris-jazz-festival/';
 var redirect = 'https://geneharris.boisestate.edu/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
