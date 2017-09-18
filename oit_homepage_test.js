@@ -19,13 +19,13 @@ const until = webdriver.until;
 require('./includes/header.js').testHeader(webdriver, driver);
 require('./includes/search.js').testSearch(webdriver, driver);
 
-// Test that there's a HOME link, and that it's of the proper class
-driver.findElements({className: 'menu-item-home'}).then(function(elements) {
+// Test that there's an Office of Information Technology link, and that it's of the proper class
+driver.findElements({className: 'dept-title'}).then(function(elements) {
         var isPresent = elements.length;
         if (isPresent){
-                console.log('Page element of class \'menu-item-home\' (the left-nav HOME link) is here');
+                console.log('Page element of class \'dept-title\' (the left-nav OIT link) is here');
         } else {
-                console.log('ERROR: Page element of class \'menu-item-home\' (the left-nav HOME link) is NOT FOUND');
+                console.log('ERROR: Page element of class \'OIT\' (the left-nav OIT link) is NOT FOUND');
         }
 });
 
