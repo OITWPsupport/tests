@@ -154,62 +154,50 @@ driver.findElements({id: 'topnav'}).then(function(elements) {
 // Testing redirects
 // 
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2011/11/11/military-members-vets-focus-of-activities-on-bsu-campus/';
 var redirect = 'http://news.boisestate.edu/update/2011/11/10/military-members-vets-focus-of-activities-on-boise-state-campus/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2011/11/11/service-learning-students-partner-with-wyakin-warroirs/';
 var redirect = 'http://news.boisestate.edu/update/2011/11/10/service-learning-students-partner-with-wyakin-warriors/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/01/23/photo-of-the-week-11-11-11/';
 var redirect = 'http://news.boisestate.edu/update/2011/11/11/photo-of-the-week-%E2%80%94-nov-11/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/01/23/2011-veterans-day-ceremony-slideshow/';
 var redirect = 'http://boisestate.edu/media/2011_veterans_day/index.html';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/01/23/war-hero-turned-bronco-awarded-purple-heart/';
 var redirect = 'http://news.boisestate.edu/update/2011/09/08/war-hero-turned-bronco-awarded-purple-heart/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/01/23/new-gi-bill/';
 var redirect = 'http://newgibill.org/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/01/26/veteran-services-spring-2012-update-2/';
 var redirect = 'https://veterans.boisestate.edu/wp-content/uploads/2012/01/news_letter-spr-121.pdf';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/02/07/two-campus-events-address-issues-facing-veterans/';
 var redirect = 'http://news.boisestate.edu/update/2012/02/06/two-campus-events-address-issues-facing-veterans/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/04/20/boise-state-recognized-for-support-of-guard-reserve-employees/';
 var redirect = 'http://news.boisestate.edu/update/2012/04/19/boise-state-recognized-for-support-of-guard-reserve-employees/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/06/21/six-disabled-vets-to-be-inducted-as-newest-wyakin-warriors/';
 var redirect = 'http://news.boisestate.edu/update/2012/06/20/six-disabled-vets-to-be-inducted-as-newest-wyakin-warriors/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/07/16/2012-all-veterans-welcome-home/';
 var redirect = 'http://www.boise.va.gov/2012_All_Veterans_Welcome_Home.asp';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);
 
-// driver.sleep(1500);
 var URL = 'https://veterans.boisestate.edu/blog/2012/08/06/veterans-affairs-secretary-shinseki-meets-on-campus-with-boise-state-student-veterans/';
 var redirect = 'http://news.boisestate.edu/update/2012/08/03/veterans-affairs-secretary-shinseki-meets-on-campus-with-boise-state-student-veterans/';
 require('./includes/redirect.js').testRedirect(webdriver, driver, URL, redirect);

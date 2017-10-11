@@ -5,12 +5,13 @@ module.exports.testSearch = function (webdriver, driver) {
                 	console.log('Page element \'q\' (the search field) is here');
                         // On 20170420, this started causing errors in all tests.
                         // We're unable to test search until we debug this
-/*
-			console.log('\tSubmitting search term \'test search from OIT\'...');
-			var searchField = driver.findElement({id: 'q' });
-			searchField.clear();
-			searchField.sendKeys("test search from OIT",webdriver.Key.ENTER);
 
+			console.log('\tSubmitting search term \'test search from OIT\'...');
+			var searchField = driver.findElement({id: 'q'});
+			// searchField.clear();
+			var keys = ['t','e','s','t'];
+			searchField.keys("test");
+/*
 			const until = webdriver.until;
 
 			// Wait a few seconds, then see if the search results div is present:

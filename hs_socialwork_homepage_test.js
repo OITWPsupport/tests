@@ -54,14 +54,14 @@ driver.findElements({className: 'child_toggle'}).then(function(elements) {
         }
 });
 
-// Test that a 'SCHOOL OF SOCIAL WORK' item appears in the left nav.
+// Test that an 'ABOUT SOCIAL WORK' item appears in the left nav.
 driver.findElements({id: 'menu-item-33452'}).then(function(elements) {
         var isPresent = elements.length;
         if (isPresent){
-                console.log('Page element \'menu-item-33452\' (\'SCHOOL OF SOCIAL WORK left-nav link\')) is here');
+                console.log('Page element \'menu-item-33452\' (\'ABOUT SOCIAL WORK left-nav link\')) is here');
                 elements[0].getText().then(function (text) { console.log('\ttext = ' + text); });
         } else {
-                console.log('ERROR: Page element \'menu-item-33452\' (\'SCHOOL OF SOCIAL WORK left-nav link\')) is NOT FOUND');
+                console.log('ERROR: Page element \'menu-item-33452\' (\'ABOUT SOCIAL WORK left-nav link\')) is NOT FOUND');
         }
 });
 
@@ -108,11 +108,11 @@ driver.findElements({className: 'entry-title'}).then(function(elements) {
         if (isPresent){
                 console.log('Page element \'entry-title\' is here');
 		elements[0].getText().then(function (text) {
-	                if (text == 'ABOUT THE BOISE STATE SCHOOL OF SOCIAL WORK') {
+	                if (text == 'THE SCHOOL OF SOCIAL WORK') {
        	                	 console.log('\tText is correct: ' + text);
                 	} else {
                         	console.log('\tERROR: Text is INCORRECT: ' + text);
-				console.log('\t(Should read \'ABOUT THE BOISE STATE SCHOOL OF SOCIAL WORK\'');
+				console.log('\t(Should read \'THE SCHOOL OF SOCIAL WORK\'');
                 	}
 		});
         } else {
