@@ -7,6 +7,6 @@ describe('webdriver.io page', function() {
                 // browser.reload();
 		// browser.pause(3000);
                 var title = browser.getTitle();
-                assert.equal(title, 'Advising and Academic Enhancement - Advising and Academic Enhancement');
+                assert.equal(title, 'Home - Advising and Academic Support Center - Boise State University');
         });
 });
