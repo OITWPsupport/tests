@@ -32,6 +32,12 @@ exports.config = {
 	],
 	search: [
 		'/Users/david/Documents/git_repos/tests/webdriverio/new/search_api2.js'
+	],
+	search_oit: [
+                '/Users/david/Documents/git_repos/tests/webdriverio/new/search_oit.js'
+	],
+	search_test: [
+		'/Users/david/Documents/git_repos/tests/webdriverio/new/search_test.js'
 	]
     },
     //
