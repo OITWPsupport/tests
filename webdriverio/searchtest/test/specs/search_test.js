@@ -6,7 +6,7 @@ var assert = require('assert');
 var URL = 'https://test.boisestate.edu/'; // KEEP the trailing slash
 var searchString = 'jessen';
 
-describe('webdriver.io page', function() {
+describe('Check that this site successfully uses the new search (Google Custom Search Element API 2.0)', function() {
     it('should submit a search', function () {
         browser.url(URL);
         browser.waitForExist('#q', 5000);
