@@ -1,4 +1,8 @@
 # tests
+
+## Deprecated. 
+Instead, see https://github.com/OITWPsupport/page-object-tests
+
 This repository contains Selenium Webdriver tests created and maintained by OIT's WP Support team. Each tests runs against a single page, 
 and aims to confirm the presence and correctness of a small set of page elements. The coverage and depth provided by these tests is small, 
 but we can run them quickly and regularly to detect possible errors.
